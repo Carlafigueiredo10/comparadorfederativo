@@ -1,0 +1,256 @@
+{
+  "fonte": "SNIS",
+  "url_fonte": "http://snis.gov.br/diagnostico-anual",
+  "ano_referencia": 2022,
+  "data_coleta": "2026-05-15T10:55:28.712870+00:00",
+  "nota": "Coletado de basedosdados.br_mdr_snis.municipio_agua_esgoto via BigQuery — 27/27 UFs com dado real.",
+  "indicadores_descricao": {
+    "aguaTratada": "Índice de atendimento total de água (SNIS IN055), % da população",
+    "esgotoColetado": "Índice de atendimento de esgoto referido à população atendida com água (SNIS, equivalente próximo a IN046), % da população atendida com água"
+  },
+  "valores": [
+    {
+      "uf": "AC",
+      "is_estimativa": false,
+      "municipios": 22,
+      "indicadores": {
+        "aguaTratada": 50.58,
+        "esgotoColetado": 11.97
+      }
+    },
+    {
+      "uf": "AP",
+      "is_estimativa": false,
+      "municipios": 16,
+      "indicadores": {
+        "aguaTratada": 51.11,
+        "esgotoColetado": 6.18
+      }
+    },
+    {
+      "uf": "AM",
+      "is_estimativa": false,
+      "municipios": 56,
+      "indicadores": {
+        "aguaTratada": 91.02,
+        "esgotoColetado": 17.47
+      }
+    },
+    {
+      "uf": "PA",
+      "is_estimativa": false,
+      "municipios": 130,
+      "indicadores": {
+        "aguaTratada": 72.24,
+        "esgotoColetado": 11.22
+      }
+    },
+    {
+      "uf": "RO",
+      "is_estimativa": false,
+      "municipios": 49,
+      "indicadores": {
+        "aguaTratada": 68.26,
+        "esgotoColetado": 10.23
+      }
+    },
+    {
+      "uf": "RR",
+      "is_estimativa": false,
+      "municipios": 15,
+      "indicadores": {
+        "aguaTratada": 87.59,
+        "esgotoColetado": 77.54
+      }
+    },
+    {
+      "uf": "TO",
+      "is_estimativa": false,
+      "municipios": 135,
+      "indicadores": {
+        "aguaTratada": 88.68,
+        "esgotoColetado": 39.02
+      }
+    },
+    {
+      "uf": "AL",
+      "is_estimativa": false,
+      "municipios": 101,
+      "indicadores": {
+        "aguaTratada": 82.68,
+        "esgotoColetado": 21.74
+      }
+    },
+    {
+      "uf": "BA",
+      "is_estimativa": false,
+      "municipios": 409,
+      "indicadores": {
+        "aguaTratada": 85.45,
+        "esgotoColetado": 46.5
+      }
+    },
+    {
+      "uf": "CE",
+      "is_estimativa": false,
+      "municipios": 184,
+      "indicadores": {
+        "aguaTratada": 75.27,
+        "esgotoColetado": 33.65
+      }
+    },
+    {
+      "uf": "MA",
+      "is_estimativa": false,
+      "municipios": 194,
+      "indicadores": {
+        "aguaTratada": 77.13,
+        "esgotoColetado": 19.28
+      }
+    },
+    {
+      "uf": "PB",
+      "is_estimativa": false,
+      "municipios": 200,
+      "indicadores": {
+        "aguaTratada": 86.45,
+        "esgotoColetado": 47.98
+      }
+    },
+    {
+      "uf": "PE",
+      "is_estimativa": false,
+      "municipios": 181,
+      "indicadores": {
+        "aguaTratada": 90.08,
+        "esgotoColetado": 35.63
+      }
+    },
+    {
+      "uf": "PI",
+      "is_estimativa": false,
+      "municipios": 200,
+      "indicadores": {
+        "aguaTratada": 81.41,
+        "esgotoColetado": 23.75
+      }
+    },
+    {
+      "uf": "RN",
+      "is_estimativa": false,
+      "municipios": 164,
+      "indicadores": {
+        "aguaTratada": 84.2,
+        "esgotoColetado": 32.27
+      }
+    },
+    {
+      "uf": "SE",
+      "is_estimativa": false,
+      "municipios": 75,
+      "indicadores": {
+        "aguaTratada": 93.66,
+        "esgotoColetado": 36.21
+      }
+    },
+    {
+      "uf": "DF",
+      "is_estimativa": false,
+      "municipios": 1,
+      "indicadores": {
+        "aguaTratada": 98.99,
+        "esgotoColetado": 92.3
+      }
+    },
+    {
+      "uf": "GO",
+      "is_estimativa": false,
+      "municipios": 244,
+      "indicadores": {
+        "aguaTratada": 90.86,
+        "esgotoColetado": 66.0
+      }
+    },
+    {
+      "uf": "MT",
+      "is_estimativa": false,
+      "municipios": 127,
+      "indicadores": {
+        "aguaTratada": 89.85,
+        "esgotoColetado": 43.34
+      }
+    },
+    {
+      "uf": "MS",
+      "is_estimativa": false,
+      "municipios": 79,
+      "indicadores": {
+        "aguaTratada": 88.57,
+        "esgotoColetado": 61.61
+      }
+    },
+    {
+      "uf": "ES",
+      "is_estimativa": false,
+      "municipios": 78,
+      "indicadores": {
+        "aguaTratada": 87.55,
+        "esgotoColetado": 63.37
+      }
+    },
+    {
+      "uf": "MG",
+      "is_estimativa": false,
+      "municipios": 836,
+      "indicadores": {
+        "aguaTratada": 87.69,
+        "esgotoColetado": 80.48
+      }
+    },
+    {
+      "uf": "RJ",
+      "is_estimativa": false,
+      "municipios": 92,
+      "indicadores": {
+        "aguaTratada": 91.19,
+        "esgotoColetado": 67.82
+      }
+    },
+    {
+      "uf": "SP",
+      "is_estimativa": false,
+      "municipios": 643,
+      "indicadores": {
+        "aguaTratada": 96.05,
+        "esgotoColetado": 91.65
+      }
+    },
+    {
+      "uf": "PR",
+      "is_estimativa": false,
+      "municipios": 399,
+      "indicadores": {
+        "aguaTratada": 97.17,
+        "esgotoColetado": 78.36
+      }
+    },
+    {
+      "uf": "RS",
+      "is_estimativa": false,
+      "municipios": 485,
+      "indicadores": {
+        "aguaTratada": 91.56,
+        "esgotoColetado": 39.27
+      }
+    },
+    {
+      "uf": "SC",
+      "is_estimativa": false,
+      "municipios": 293,
+      "indicadores": {
+        "aguaTratada": 92.44,
+        "esgotoColetado": 31.17
+      }
+    }
+  ]
+}

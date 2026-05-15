@@ -1,0 +1,4 @@
+# Coletores do Sprint 5: maioria usa apenas stdlib do Python 3.11+.
+# Exceção: coletores que falam com BigQuery (Base dos Dados) precisam do pacote
+# basedosdados, que traz pandas + google-cloud-bigquery transitivamente.
+basedosdados>=2.0.0

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 
 // =============================================================================
@@ -475,10 +475,66 @@ export default function PerfisEstaduais() {
     return Math.round(scoreSoma / somaPesos);
   }
 
-  const dadosUnificados = useMemo(() => unificarVisoes(), []);
+  // Sprint 5 — dados ao vivo da API (/api/snis, /api/cnes). Sobrescrevem 3 proxies
+  // operacionais nos 5 estados-piloto. Se a API estiver offline, mantém os valores
+  // hardcoded do protótipo (degradação transparente).
+  const [apiPatch, setApiPatch] = useState(null);
+  const [apiStatus, setApiStatus] = useState('loading'); // 'loading' | 'live' | 'offline'
+
+  useEffect(() => {
+    let abort = false;
+    Promise.all([
+      fetch('/api/snis').then(r => r.ok ? r.json() : Promise.reject(r.status)),
+      fetch('/api/cnes').then(r => r.ok ? r.json() : Promise.reject(r.status))
+    ]).then(([snis, cnes]) => {
+      if (abort) return;
+      const patch = { aguaTratada: {}, esgotoColetado: {}, leitosPorMil: {} };
+      Object.entries(snis.estados || {}).forEach(([uf, e]) => {
+        const a = e.proxies?.aguaTratada?.bruto;
+        const s = e.proxies?.esgotoColetado?.bruto;
+        if (a != null) patch.aguaTratada[uf] = a;
+        if (s != null) patch.esgotoColetado[uf] = s;
+      });
+      Object.entries(cnes.estados || {}).forEach(([uf, e]) => {
+        const l = e.proxies?.leitosPorMil?.bruto;
+        if (l != null) patch.leitosPorMil[uf] = l;
+      });
+      setApiPatch(patch);
+      setApiStatus('live');
+    }).catch((err) => {
+      if (!abort) {
+        console.warn('API offline, usando dados estáticos:', err);
+        setApiStatus('offline');
+      }
+    });
+    return () => { abort = true; };
+  }, []);
+
+  const dadosOperacionalEfetivo = useMemo(() => {
+    if (!apiPatch) return DADOS_OPERACIONAL;
+    const merged = {};
+    Object.entries(DADOS_OPERACIONAL).forEach(([uf, vals]) => {
+      merged[uf] = {
+        ...vals,
+        ...(apiPatch.aguaTratada[uf] != null && { aguaTratada: apiPatch.aguaTratada[uf] }),
+        ...(apiPatch.esgotoColetado[uf] != null && { esgotoColetado: apiPatch.esgotoColetado[uf] }),
+        ...(apiPatch.leitosPorMil[uf] != null && { leitosPorMil: apiPatch.leitosPorMil[uf] })
+      };
+    });
+    return merged;
+  }, [apiPatch]);
+
+  const dadosUnificados = useMemo(() => ({
+    dimensoes: { ...DIMENSOES_SOCIOCULTURAL, ...DIMENSOES_OPERACIONAL },
+    proxies: { ...PROXIES_SOCIOCULTURAL, ...PROXIES_OPERACIONAL },
+    dados: Object.keys(DADOS_SOCIOCULTURAL).reduce((acc, sigla) => {
+      acc[sigla] = { ...DADOS_SOCIOCULTURAL[sigla], ...dadosOperacionalEfetivo[sigla] };
+      return acc;
+    }, {})
+  }), [dadosOperacionalEfetivo]);
 
   const dadosRaw = visao === 'sociocultural' ? DADOS_SOCIOCULTURAL :
-                   visao === 'operacional' ? DADOS_OPERACIONAL :
+                   visao === 'operacional' ? dadosOperacionalEfetivo :
                    dadosUnificados.dados;
   const proxiesMeta = visao === 'sociocultural' ? PROXIES_SOCIOCULTURAL :
                       visao === 'operacional' ? PROXIES_OPERACIONAL :
@@ -558,9 +614,28 @@ export default function PerfisEstaduais() {
         <header style={{ marginBottom: '32px', borderBottom: '2px solid #1a1a1a', paddingBottom: '20px' }}>
           <div style={{
             fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase',
-            marginBottom: '8px', color: '#666'
+            marginBottom: '8px', color: '#666',
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '12px',
+            flexWrap: 'wrap'
           }}>
-            Sprint 4 · Plataforma Configurável · Virada Estratégica
+            <span>Sprint 5 · API ligada · 27 estados em coleta</span>
+            <span title={
+              apiStatus === 'live' ? 'Água/esgoto/leitos vindo de /api/snis e /api/cnes' :
+              apiStatus === 'offline' ? 'API fora do ar — usando valores estáticos do protótipo' :
+              'Carregando dados ao vivo da API…'
+            } style={{
+              display: 'inline-flex', alignItems: 'center', gap: '6px',
+              padding: '2px 8px', borderRadius: '999px',
+              backgroundColor: apiStatus === 'live' ? '#dcfce7' : apiStatus === 'offline' ? '#fef2f2' : '#fef9c3',
+              color: apiStatus === 'live' ? '#166534' : apiStatus === 'offline' ? '#991b1b' : '#854d0e',
+              fontSize: '10px', letterSpacing: '0.1em'
+            }}>
+              <span style={{
+                width: '6px', height: '6px', borderRadius: '50%',
+                backgroundColor: apiStatus === 'live' ? '#22c55e' : apiStatus === 'offline' ? '#ef4444' : '#eab308'
+              }} />
+              {apiStatus === 'live' ? 'API live' : apiStatus === 'offline' ? 'estático' : '…'}
+            </span>
           </div>
           <h1 style={{
             fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: '1.05',

@@ -1,0 +1,39 @@
+{
+  "fonte": "CNES",
+  "url_fonte": "https://cnes.datasus.gov.br/",
+  "ano_referencia": 2024,
+  "data_coleta": null,
+  "nota": "Snapshot-semente. Os 5 estados do piloto vêm das estimativas calibradas do protótipo; os demais 22 estão nulos aguardando coleta. O coletor BQ (pipelines/coleta_cnes_bq.py) sobrescreve este arquivo com dado de basedosdados.br_ms_cnes.*.",
+  "indicadores_descricao": {
+    "leitosPorMil": "Leitos hospitalares totais (SUS + não-SUS) por mil habitantes, agregados por UF a partir do CNES."
+  },
+  "valores": [
+    { "uf": "AC", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "AP", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "AM", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "PA", "is_estimativa": false, "indicadores": { "leitosPorMil": 1.98 } },
+    { "uf": "RO", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "RR", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "TO", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "AL", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "BA", "is_estimativa": true, "indicadores": { "leitosPorMil": 2.0 } },
+    { "uf": "CE", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "MA", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "PB", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "PE", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "PI", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "RN", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "SE", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "DF", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "GO", "is_estimativa": true, "indicadores": { "leitosPorMil": 2.3 } },
+    { "uf": "MT", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "MS", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "ES", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "MG", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "RJ", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "SP", "is_estimativa": false, "indicadores": { "leitosPorMil": 2.4 } },
+    { "uf": "PR", "is_estimativa": true, "indicadores": { "leitosPorMil": null } },
+    { "uf": "RS", "is_estimativa": false, "indicadores": { "leitosPorMil": 2.71 } },
+    { "uf": "SC", "is_estimativa": true, "indicadores": { "leitosPorMil": null } }
+  ]
+}

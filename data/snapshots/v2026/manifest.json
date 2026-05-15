@@ -1,0 +1,7 @@
+{
+  "versao": "v2026",
+  "data_publicacao": null,
+  "ativo": true,
+  "changelog": "Versão inicial do Sprint 5. Fontes: SNIS (saneamento), CNES (saúde). Snapshots-semente com 5 estados-piloto; coleta dos 27 em andamento via Base dos Dados (BigQuery).",
+  "fontes": ["snis", "cnes"]
+}

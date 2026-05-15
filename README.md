@@ -49,3 +49,9 @@ staticwebapp.config.json   Routing SPA + headers
 - **Sprint 5** (em curso): expansão a 27 estados, ingestão das fontes oficiais (IBGE SIDRA, IPEA Data, TSE, INEP, SNIS, CNES, CGU, CNJ).
 - **Sprint 6**: validação metodológica (PCA, leave-one-out, convergência externa).
 - **Sprint 7**: URL compartilhável, exportação PDF/CSV, cruzamento de visões.
+
+## Documentação
+
+- [Roadmap completo](docs/roadmap.md) — visão estratégica e backlog de Sprints 8-12
+- [Especificação técnica](docs/especificacao-tecnica.md) — arquitetura, contratos de API, modelo de dados
+- [Guia de desenvolvimento](docs/guia-desenvolvimento.md) — sprints concretos, fontes de dados, passo a passo
