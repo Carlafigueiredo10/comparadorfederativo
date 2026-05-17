@@ -9,6 +9,7 @@ via GitHub Actions.
 | `coleta_snis.py` | SNIS (saneamento) | `data/raw/snis_<ano>.csv` (CSV manual) | `data/snapshots/v2026/snis.json` |
 | `coleta_snis_bq.py` | SNIS via BigQuery (Base dos Dados) | `basedosdados.br_mdr_snis.municipio_agua_esgoto` | `data/snapshots/v2026/snis.json` |
 | `coleta_cnes_bq.py` | CNES (saúde, leitos) via BigQuery | `basedosdados.br_ms_cnes.estabelecimento` + `data/states.json` | `data/snapshots/v2026/cnes.json` |
+| `coleta_ana_atlas.py` | ANA Atlas Esgotos via BigQuery | `basedosdados.br_ana_atlas_esgotos.municipio` | `data/snapshots/v2026/ana_atlas.json` |
 | `listar_bd.py` | — | qualquer dataset público da BD | stdout (descoberta) |
 
 ## Como rodar
@@ -37,7 +38,11 @@ gcloud auth application-default login
 # 3. rodar
 python pipelines/coleta_snis_bq.py --ano 2022
 python pipelines/coleta_cnes_bq.py --ano 2024
+python pipelines/coleta_ana_atlas.py
 ```
+
+> `coleta_ana_atlas.py` não tem `--ano`: a tabela do Atlas é o diagnóstico ANA
+> 2013 (publicado em 2017), sem revisões anuais. O ano de referência é fixo.
 
 Flags úteis:
 - `--billing-project <id>` — GCP project que paga o scan (default: `abrigo-gatos`)

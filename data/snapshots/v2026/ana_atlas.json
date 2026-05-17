@@ -1,0 +1,284 @@
+{
+  "fonte": "ANA Atlas Esgotos",
+  "url_fonte": "https://www.snirh.gov.br/portal/centrais-de-conteudos/atlas",
+  "ano_referencia": 2013,
+  "data_coleta": "2026-05-17T13:22:45.678843+00:00",
+  "nota": "Coletado de basedosdados.br_ana_atlas_esgotos.municipio via BigQuery — 27/27 UFs com dado real. Agregação ponderada por populacao_urbana_2013.",
+  "indicadores_descricao": {
+    "coletaTratamento": "Índice de atendimento com coleta e tratamento de esgoto (ANA Atlas 2013), % da população urbana",
+    "solucaoIndividual": "Índice de atendimento por solução individual — fossa séptica (ANA Atlas 2013), % da população urbana",
+    "semColetaSemTratamento": "Índice sem atendimento — sem coleta e sem tratamento (ANA Atlas 2013), % da população urbana"
+  },
+  "valores": [
+    {
+      "uf": "AC",
+      "is_estimativa": false,
+      "municipios": 22,
+      "indicadores": {
+        "coletaTratamento": 33.47,
+        "solucaoIndividual": 12.9,
+        "semColetaSemTratamento": 51.65
+      }
+    },
+    {
+      "uf": "AP",
+      "is_estimativa": false,
+      "municipios": 16,
+      "indicadores": {
+        "coletaTratamento": 6.69,
+        "solucaoIndividual": 16.86,
+        "semColetaSemTratamento": 75.84
+      }
+    },
+    {
+      "uf": "AM",
+      "is_estimativa": false,
+      "municipios": 62,
+      "indicadores": {
+        "coletaTratamento": 18.79,
+        "solucaoIndividual": 19.83,
+        "semColetaSemTratamento": 57.73
+      }
+    },
+    {
+      "uf": "PA",
+      "is_estimativa": false,
+      "municipios": 144,
+      "indicadores": {
+        "coletaTratamento": 3.73,
+        "solucaoIndividual": 25.29,
+        "semColetaSemTratamento": 65.86
+      }
+    },
+    {
+      "uf": "RO",
+      "is_estimativa": false,
+      "municipios": 52,
+      "indicadores": {
+        "coletaTratamento": 3.61,
+        "solucaoIndividual": 19.69,
+        "semColetaSemTratamento": 71.55
+      }
+    },
+    {
+      "uf": "RR",
+      "is_estimativa": false,
+      "municipios": 15,
+      "indicadores": {
+        "coletaTratamento": 14.71,
+        "solucaoIndividual": 33.51,
+        "semColetaSemTratamento": 47.98
+      }
+    },
+    {
+      "uf": "TO",
+      "is_estimativa": false,
+      "municipios": 139,
+      "indicadores": {
+        "coletaTratamento": 28.97,
+        "solucaoIndividual": 15.66,
+        "semColetaSemTratamento": 54.06
+      }
+    },
+    {
+      "uf": "AL",
+      "is_estimativa": false,
+      "municipios": 102,
+      "indicadores": {
+        "coletaTratamento": 16.56,
+        "solucaoIndividual": 12.29,
+        "semColetaSemTratamento": 61.92
+      }
+    },
+    {
+      "uf": "BA",
+      "is_estimativa": false,
+      "municipios": 417,
+      "indicadores": {
+        "coletaTratamento": 50.86,
+        "solucaoIndividual": 5.68,
+        "semColetaSemTratamento": 31.17
+      }
+    },
+    {
+      "uf": "CE",
+      "is_estimativa": false,
+      "municipios": 184,
+      "indicadores": {
+        "coletaTratamento": 39.69,
+        "solucaoIndividual": 30.43,
+        "semColetaSemTratamento": 25.88
+      }
+    },
+    {
+      "uf": "MA",
+      "is_estimativa": false,
+      "municipios": 217,
+      "indicadores": {
+        "coletaTratamento": 3.93,
+        "solucaoIndividual": 22.31,
+        "semColetaSemTratamento": 60.78
+      }
+    },
+    {
+      "uf": "PB",
+      "is_estimativa": false,
+      "municipios": 223,
+      "indicadores": {
+        "coletaTratamento": 42.61,
+        "solucaoIndividual": 6.92,
+        "semColetaSemTratamento": 34.25
+      }
+    },
+    {
+      "uf": "PE",
+      "is_estimativa": false,
+      "municipios": 185,
+      "indicadores": {
+        "coletaTratamento": 26.96,
+        "solucaoIndividual": 11.31,
+        "semColetaSemTratamento": 44.12
+      }
+    },
+    {
+      "uf": "PI",
+      "is_estimativa": false,
+      "municipios": 224,
+      "indicadores": {
+        "coletaTratamento": 10.11,
+        "solucaoIndividual": 28.4,
+        "semColetaSemTratamento": 59.16
+      }
+    },
+    {
+      "uf": "RN",
+      "is_estimativa": false,
+      "municipios": 167,
+      "indicadores": {
+        "coletaTratamento": 24.58,
+        "solucaoIndividual": 22.1,
+        "semColetaSemTratamento": 47.28
+      }
+    },
+    {
+      "uf": "SE",
+      "is_estimativa": false,
+      "municipios": 75,
+      "indicadores": {
+        "coletaTratamento": 21.6,
+        "solucaoIndividual": 11.42,
+        "semColetaSemTratamento": 56.27
+      }
+    },
+    {
+      "uf": "DF",
+      "is_estimativa": false,
+      "municipios": 1,
+      "indicadores": {
+        "coletaTratamento": 83.08,
+        "solucaoIndividual": 8.34,
+        "semColetaSemTratamento": 8.57
+      }
+    },
+    {
+      "uf": "GO",
+      "is_estimativa": false,
+      "municipios": 246,
+      "indicadores": {
+        "coletaTratamento": 47.7,
+        "solucaoIndividual": 13.1,
+        "semColetaSemTratamento": 36.6
+      }
+    },
+    {
+      "uf": "MT",
+      "is_estimativa": false,
+      "municipios": 141,
+      "indicadores": {
+        "coletaTratamento": 22.18,
+        "solucaoIndividual": 21.41,
+        "semColetaSemTratamento": 54.29
+      }
+    },
+    {
+      "uf": "MS",
+      "is_estimativa": false,
+      "municipios": 79,
+      "indicadores": {
+        "coletaTratamento": 42.81,
+        "solucaoIndividual": 15.27,
+        "semColetaSemTratamento": 41.14
+      }
+    },
+    {
+      "uf": "ES",
+      "is_estimativa": false,
+      "municipios": 78,
+      "indicadores": {
+        "coletaTratamento": 41.03,
+        "solucaoIndividual": 4.52,
+        "semColetaSemTratamento": 34.48
+      }
+    },
+    {
+      "uf": "MG",
+      "is_estimativa": false,
+      "municipios": 853,
+      "indicadores": {
+        "coletaTratamento": 43.52,
+        "solucaoIndividual": 2.45,
+        "semColetaSemTratamento": 11.55
+      }
+    },
+    {
+      "uf": "RJ",
+      "is_estimativa": false,
+      "municipios": 92,
+      "indicadores": {
+        "coletaTratamento": 42.75,
+        "solucaoIndividual": 8.85,
+        "semColetaSemTratamento": 17.54
+      }
+    },
+    {
+      "uf": "SP",
+      "is_estimativa": false,
+      "municipios": 645,
+      "indicadores": {
+        "coletaTratamento": 64.67,
+        "solucaoIndividual": 3.84,
+        "semColetaSemTratamento": 9.19
+      }
+    },
+    {
+      "uf": "PR",
+      "is_estimativa": false,
+      "municipios": 399,
+      "indicadores": {
+        "coletaTratamento": 64.04,
+        "solucaoIndividual": 11.28,
+        "semColetaSemTratamento": 23.54
+      }
+    },
+    {
+      "uf": "RS",
+      "is_estimativa": false,
+      "municipios": 497,
+      "indicadores": {
+        "coletaTratamento": 26.33,
+        "solucaoIndividual": 23.94,
+        "semColetaSemTratamento": 21.56
+      }
+    },
+    {
+      "uf": "SC",
+      "is_estimativa": false,
+      "municipios": 295,
+      "indicadores": {
+        "coletaTratamento": 24.37,
+        "solucaoIndividual": 47.28,
+        "semColetaSemTratamento": 19.74
+      }
+    }
+  ]
+}

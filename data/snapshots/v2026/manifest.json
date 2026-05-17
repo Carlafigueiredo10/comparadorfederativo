@@ -2,6 +2,6 @@
   "versao": "v2026",
   "data_publicacao": null,
   "ativo": true,
-  "changelog": "Versão inicial do Sprint 5. Fontes: SNIS (saneamento), CNES (saúde). Snapshots-semente com 5 estados-piloto; coleta dos 27 em andamento via Base dos Dados (BigQuery).",
-  "fontes": ["snis", "cnes"]
+  "changelog": "Versão inicial do Sprint 5. Fontes: SNIS (saneamento), CNES (saúde), ANA Atlas Esgotos (decomposição da cobertura de esgoto em coleta+tratamento, solução individual e sem atendimento). Coleta dos 27 UFs via Base dos Dados (BigQuery).",
+  "fontes": ["snis", "cnes", "ana_atlas"]
 }
