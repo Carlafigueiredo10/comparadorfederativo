@@ -8,6 +8,8 @@ Apps a pasta `data/` é copiada para dentro de `api/` pelo workflow de deploy;
 em desenvolvimento local ela é lida da raiz do repositório.
 """
 
+from __future__ import annotations  # type hints como str -> compatível com Python 3.9+ do Oryx
+
 import json
 import logging
 from pathlib import Path
